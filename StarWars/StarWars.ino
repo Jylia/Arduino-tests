@@ -1,18 +1,17 @@
-#define BUZZER_PIN = 3,
-#define LDR_PIN = A0
-#define PORT_1 = 8,
-#define PORT_2 = 10,
-#define PORT_3 = 7,
-#define NOTE_6 = 3136.00,
-#define NOTE_3 = 2637.20,
-#define NOTE_7 = 3951.40,
-#define NOTE_2_H = 4698.40,
-#define NOTE_3_H = 5274.00,
-#define NOTE_4_dz = 2960.00,
-#define HALF = 400,
-#define QUATRO = 200,
-#define EIGHT = 100,
-#define FULL = 800
+#define BUZZER_PIN 3
+#define PORT_1 8
+#define PORT_2 10
+#define PORT_3 7
+#define NOTE_6 3136.00
+#define NOTE_3 2637.20
+#define NOTE_7 3951.40
+#define NOTE_2_H 4698.40
+#define NOTE_3_H 5274.00
+#define NOTE_4_dz 2960.00
+#define HALF 400
+#define QUATRO 200
+#define EIGHT 100
+#define FULL 800
 
 void setup()
 {
@@ -45,10 +44,10 @@ void playStarWars() {
   SW(HALF, FULL, NOTE_6, getLPort(NOTE_6));
 }
 
-void SW(int _tone, int pause, int nota, int l_port) {
+void SW(int _tone, int pause, int note, int l_port) {
   digitalWrite(l_port, HIGH);
 
-  tone(BUZZER_PIN, nota, _tone);
+  tone(BUZZER_PIN, note, _tone);
 
   delay(_tone);
 
@@ -69,6 +68,5 @@ int getLPort(double nota) {
   }
 }
 
-void loop()
-{
-}
+
+void loop () {}
